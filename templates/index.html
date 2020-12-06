@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Домашняя страница{% endblock %}
+{% block content %}
+<div class="p-3 mb-1 bg-success text-white rounded"><h1>Привет!</h1></div>
+    <dt class="p-3 mb-2 bg-info text-white rounded">Что здесь происходит?</dt>
+        <dd>Мы пытаемся понять, насколько хорошо посетители нашего сайта разбираются в русских диалектных чертах.</dd>
+    <dt class="p-3 mb-2 bg-info text-white rounded">Что нужно сделать?</dt>
+        <dd>Пройти небольшой <a href="/poll">опрос</a>!</dd>
+    <dt class="p-3 mb-2 bg-info text-white rounded">Опрос пройден, что дальше?</dt>
+        <dd>Загляните на <a href="/results">страницу результатов</a> :)</dd>
+{% endblock %}

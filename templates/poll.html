@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Опрос{% endblock %}
+{% block content %}
+<form action="{{ url_for('process') }}" method="post">
+    <div class="card">
+        <h5 class="card-header">Персональная информация</h5>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="user">Ваше имя</label>
+                <input type="text" class="form-control" name="user" placeholder="Ахмад Каземи">
+            </div>
+            <div class="form-group">
+                <label for="age">Сколько вам лет?</label>
+                <input type="number" class="form-control" name="age" placeholder="20">
+            </div>
+            <div class="form-group">
+                <label for="pob">Где вы родились?</label>
+                <input type="text" class="form-control" name="pob" placeholder="Шираз">
+            </div>
+            <div class="form-group">
+                <label for="ed">Выберите последнее, что закончили</label>
+                    <select class="form-control" name="ed">
+                        <option>Школа</option>
+                        <option>Бакалавриат</option>
+                        <option>Магистратура</option>
+                        <option>Аспирантура</option>
+                        <option>Ничего из перечисленного</option>
+                    </select>
+            </div>
+        </div>
+    </div>
+   <br><div class="card">
+        <h5 class="card-header">Вопросы про диалектные черты</h5>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="q1">Где «хэкают» (например, <em><b>х</b>оворю</em> вместо <em><b>г</b>оворю</em>)?</label>
+                <select class="form-control" name="q1">
+                    <option value="1">На юге России</option>
+                    <option value="2">На севере России</option>
+                    <option value="3">На востоке России</option>
+                    <option value="4">На западе России</option>
+                    <option value="5">Нигде из перечисленных регионов</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="q2">Где окают (например, <em>к<b>о</b>рова</em> вместо <em>к<b>а</b>рова</em>)?</label>
+                <select class="form-control" name="q2">
+                    <option value="1">На юге России</option>
+                    <option value="2">На севере России</option>
+                    <option value="3">На востоке России</option>
+                    <option value="4">На западе России</option>
+                    <option value="5">Нигде из перечисленных регионов</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="q3">Где говорят <em>хата</em> вместо <em>изба</em>?</label>
+                <select class="form-control" name="q3">
+                    <option value="1">На юге России</option>
+                    <option value="2">На севере России</option>
+                    <option value="3">На востоке России</option>
+                    <option value="4">На западе России</option>
+                    <option value="5">Нигде из перечисленных регионов</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <br><button type="submit" class="btn btn-primary">Отправить ответы</button>
+</form>
+
+
+{% endblock %}
+
+<div class="container-md p-3">

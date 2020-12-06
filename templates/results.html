@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Статистика{% endblock %}
+{% block content %}
+    <h3>Статистика по метаданным</h3>
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th scope="col">Всего ответов</th>
+            <th scope="col">Средний возраст отвечающих</th>
+            <th scope="col">Самое распространенное место рождения</th>
+            <th scope="col">Самый частый уровень образования</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ total }}</td>
+            <td>{{ average }}</td>
+            <td>{{ pob_f }}</td>
+            <td>{{ edu }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <h3>Статистика по ответам</h3>
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Где «хэкают» (например, <em><b>х</b>оворю</em> вместо <em><b>г</b>оворю</em>)?</th>
+            <th scope="col">Где окают (например, <em>к<b>о</b>рова</em> вместо <em>к<b>а</b>рова</em>)?</th>
+            <th scope="col">Где говорят <em>хата</em> вместо <em>изба</em>?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Самый частый ответ</th>
+            <td>{{ q1_f }}</td>
+            <td>{{ q2_f }}</td>
+            <td>{{ q3_f }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Процент верных ответов</th>
+            <td>{{ q1_p }}</td>
+            <td>{{ q2_p }}</td>
+            <td>{{ q3_p}}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}
